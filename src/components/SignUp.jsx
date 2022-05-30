@@ -34,7 +34,6 @@ export default function SignUp() {
         <Card>
             <Card.Body>
                 <h1>Sign Up</h1>
-                { currentUser && currentUser.email }
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id='email' className='mt-3'>
                         <Form.Label>Email</Form.Label>

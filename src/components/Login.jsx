@@ -28,7 +28,6 @@ export default function Login() {
         <Card>
             <Card.Body>
                 <h1>Log In</h1>
-                { currentUser && currentUser.email }
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id='email' className='mt-3'>
                         <Form.Label>Email</Form.Label>
