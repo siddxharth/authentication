@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from "./Dashboard";
 import Login from "./Login";
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
         <div className="w-100" style={{maxWidth: "400px"}}>
           <Router>
 			  <Switch>
-				  <Route exact path='/' component={Login}/>
-				  <Route exact path='/dashboard' component={Dashboard}/>
+				  <PrivateRoute exact path='/dashboard' component={Dashboard}/>
 				  <Route exact path='/signup' component={SignUp}/>
 				  <Route exact path='/login' component={Login}/>
+				  <PrivateRoute component={Dashboard}/>
 			  </Switch>
           </Router>
         </div>
